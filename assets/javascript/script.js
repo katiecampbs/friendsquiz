@@ -54,4 +54,8 @@ let questionList = [
 document.addEventListener("DOMContentLoaded", function() {
     let questionElement = document.getElementById("question");
     questionElement.textContent = questionList[0].question;
+    let buttons = document.querySelectorAll(".btn");
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].textContent = questionList[0].answers[i];
+    };
 });

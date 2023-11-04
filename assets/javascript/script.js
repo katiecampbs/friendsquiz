@@ -58,4 +58,32 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].textContent = questionList[0].answers[i];
     };
+    let currentQuestionIndex = 0;
+    buttons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            const answer = questionList[currentQuestionIndex].answers[index];
+            checkAnswer(answer);
+        });
+    });
+    function checkAnswer(answer) {
+        let currentQuestion = questionList[currentQuestionIndex];
+        if (answer === currentQuestion.correctAnswer) {
+            alert('Correct answer!');
+        } else {
+            alert('Incorrect answer!');
+        }
+        //Increments the question list by one
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questionList.length) {
+            // Display the next question
+            questionElement.textContent = questionList[currentQuestionIndex].question;
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].textContent = questionList[currentQuestionIndex].answers[i];
+            }
+        } else {
+            alert('End of the quiz!');
+        }
+    }
 });
+
+

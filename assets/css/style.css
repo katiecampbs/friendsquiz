@@ -44,3 +44,8 @@ h2 {
     padding: 20px;
 }
 
+.btn:hover {
+    background: black;
+    color: white;
+}
+

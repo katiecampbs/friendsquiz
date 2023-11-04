@@ -51,20 +51,25 @@ let questionList = [
     }
 ]
 
+//The code will begin on the "DOMContentLoaded" event (once the page has fully loaded)
 document.addEventListener("DOMContentLoaded", function() {
     let questionElement = document.getElementById("question");
-    questionElement.textContent = questionList[0].question;
     let buttons = document.querySelectorAll(".btn");
+    let currentQuestionIndex = 0;
+    //This inserts the first question from the question list into the paragraph with an id of "question"
+    questionElement.textContent = questionList[0].question;
+    //This cycles through the answers in the first question on the list and inserts an answer as text content to each of the buttons
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].textContent = questionList[0].answers[i];
     };
-    let currentQuestionIndex = 0;
+    //Runs the checkAnswer function in the event that any of the buttons are clicked
     buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
             const answer = questionList[currentQuestionIndex].answers[index];
             checkAnswer(answer);
         });
     });
+    //Checks the answer on the button clicked against the answer in the questions list and displays an alert for the user
     function checkAnswer(answer) {
         let currentQuestion = questionList[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {

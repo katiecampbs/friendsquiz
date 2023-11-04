@@ -1,10 +1,3 @@
-function runQuiz() {
-    let questionElement = document.getElementById("question");
-    questionElement.textContent = questionList[0];
-}
-
-
-
 let questionList = [
     {
         question: "What is the name of Ross and Monica's dog when they were kids?",
@@ -58,4 +51,7 @@ let questionList = [
     }
 ]
 
-
+document.addEventListener("DOMContentLoaded", function() {
+    let questionElement = document.getElementById("question");
+    questionElement.textContent = questionList[0].question;
+});

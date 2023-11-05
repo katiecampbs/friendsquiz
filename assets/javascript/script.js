@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let questionElement = document.getElementById("question");
     let buttons = document.querySelectorAll(".btn");
     let currentQuestionIndex = 0;
+    let score = 0;
     
     //Inserts the first question from the question list into the paragraph with an id of "question"
     questionElement.textContent = questionList[0].question;
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let currentQuestion = questionList[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {
             alert('Correct answer!');
+            score = ++score;
         } else {
             alert('Incorrect answer!');
         }
@@ -93,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 buttons[i].textContent = questionList[currentQuestionIndex].answers[i];
             }
         } else {
-            alert('End of the quiz!');
+            alert(`End of the quiz! You scored ${score} out of 10!`);
         }
     }
 });

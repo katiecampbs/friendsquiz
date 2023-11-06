@@ -38,7 +38,7 @@ p {
 }
 
 .buttons {
-    padding:10px;
+    padding:10px 10px;
     margin:20px;
 }
 
@@ -49,6 +49,7 @@ p {
     background: white;
     border-radius: 10px;
     padding:20px;
+    margin: 10px;
 }
 
 .btn--restart {
@@ -63,4 +64,11 @@ p {
 .btn:hover {
     background: black;
     color: white;
+}
+
+/*Responsive design for the button size on larger screens*/
+@media only screen and (min-width: 700px) {
+   body {
+    margin: 0 20%;
+   }
 }

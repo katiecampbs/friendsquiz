@@ -100,3 +100,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+//Code from sentry.io which refreshes the page on click of the button
+const refreshBtn = document.getElementById("btn-refresh");
+function handleClick() {
+    window.location.reload();
+}
+refreshBtn.addEventListener("click", handleClick);
+

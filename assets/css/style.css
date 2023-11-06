@@ -51,8 +51,16 @@ p {
     padding:20px;
 }
 
+.btn--restart {
+    background:#A2C8A2;
+    color:black;
+    width:fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: bold;
+}
+
 .btn:hover {
     background: black;
     color: white;
 }
-

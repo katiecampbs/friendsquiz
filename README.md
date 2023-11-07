@@ -1,39 +1,39 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Friends Quiz
 
-Welcome,
+Friends Quiz is a responsive quiz for lovers of the tv show, "Friends". It is designed for die hard fans to test their knowledge with a set of interactive multiple choice questions, using Javascript. At the end of the quiz, the user is provided with a score out of ten, and has the option to retake the quiz. The site is intended to be used for trivia, for the users enjoyment. 
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive Mockup](assets/images/friends-quiz-screenshot.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Features 
 
-## Codeanywhere Reminders
+### Existing Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- __The Friends logo__
 
-`python3 -m http.server`
+  - Featured at the top of the page is the "Friends" logo. This is immediately recognisable to the user and synonymous with the brand.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Logo](assets/images/friends-logo-screenshot.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- __The Heading and Subheading__
 
-`http_server`
+  - This section explains what the user is seeing below, by introducing the quiz, and challenging them to take part. It automatically guides the user down the page. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Heading](assets/images/heading.png)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- __The Quiz Section__
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - This section comprises of a question box and four multiple choice answers below each question. As the user hovers over the answers with their mouse, each will be highlighted.
+  - The user will be able to submit their answer and a pop-up will make it known to the user if they answered correctly. The quiz will then automatically generate the next question when the user clicks okay.
 
-To log into the Heroku toolbelt CLI:
+![Quiz](assets/images/quiz.png)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- __Restart Button__
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  - This section has a button specifically to allow the user to restart the page, for instance if they want to beat their own score.
+  - When the user presses the button, the page is refreshed so that the first question is shown again. 
 
----
+![Restart](assets/images/restart.png)
 
-Happy coding!
+### Features Left to Implement
+
+- In the future there is potential to add levels to the quiz, so once the initial ten questions are answered, the user has the option to proceed onto level 2, and work through another set of questions. This would keep the user on the page longer, and even encourage them to revisit the page again another time. The questions could be updated regularly to increase the challenge.

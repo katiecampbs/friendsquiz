@@ -72,3 +72,10 @@ p {
     margin: 0 20%;
    }
 }
+
+/*Only uses hover effect over buttons on devices that support this*/
+@media(hover: hover) {
+    #btn:hover {
+        background-color: #ccf6c8;
+    }
+}

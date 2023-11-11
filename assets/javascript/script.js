@@ -49,7 +49,7 @@ let questionList = [
         answers: ['Gunther','Walter','Roger','Steven'],
         correctAnswer: 'Gunther'
     }
-]
+];
 
 //The code will begin on the "DOMContentLoaded" event (once the page has fully loaded)
 document.addEventListener("DOMContentLoaded", function() {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //Cycles through the answers in the first question on the list and inserts an answer as text content to each of the buttons
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].textContent = questionList[0].answers[i];
-    };
+    }
     /**
      * Runs the checkAnswer function in the event that any of the buttons are clicked
     */

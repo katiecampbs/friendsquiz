@@ -87,6 +87,16 @@ I have run through both correct and incorrect answers to see that the correct al
 I confirmed that the colour contrast is accessible and easy to read using webaim.org
 I confirmed that the game looks good on different screen sizes, from phone size, tablets to laptops and larger screens
 
+## Validator Testing
+
+- No errors were found in the HTML when testing with the official W3C Validator
+![Screenshot of W3c Validator](/assets/images/html-validator-test.png)
+
+- No errors were found in CSS when testing with the official Jigsaw validator
+![Screenshot of Jigsaw validator](/assets/images/css-validator-test.png)
+
+- No errors were found in Javascript when testing with JSHint JavaScript Validator
+
 ## Bugs
 ### Solved Bugs
 While testing the game on iPhone, I realised that the hover function on the buttons was malfunctioning. I realised after some searching online that this was a common problem with touch screen devices. The buttons remained highlighted after a user pressed on it, even once the game had moved onto the next question. I have resolved this problem by using a media query, so that the hover effect now only works on hover enabled devices.
@@ -103,7 +113,7 @@ The live link is located here - [Friends Quiz](https://katiecampbs.github.io/fri
 
 ## Credits
 
-The code detailing the media query which was used to fix the hover bug mentioned above, was taken from [this] (<https://www.geeksforgeeks.org/how-to-prevent-sticky-hover-effects-for-buttons-on-touch-devices/>) website
+The code detailing the media query which was used to fix the hover bug mentioned above, was taken from [this](<https://www.geeksforgeeks.org/how-to-prevent-sticky-hover-effects-for-buttons-on-touch-devices/>) website
 The questions and answers were generated using [CHAT GPT](https://chat.openai.com/)
-The ‘Friends’ logo is from [this] (<https://freebiesupply.com/logos/friends-logo/>) website
+The ‘Friends’ logo is from [this](<https://freebiesupply.com/logos/friends-logo/>) website
 

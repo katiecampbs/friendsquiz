@@ -113,4 +113,5 @@ The live link is located here - [Friends Quiz](https://katiecampbs.github.io/fri
 - The questions and answers were generated using [CHAT GPT](https://chat.openai.com/)
 - The ‘Friends’ logo is from [this](<https://freebiesupply.com/logos/friends-logo/>) website
 - Favicon created using [Favicon.io](https://favicon.io/favicon-generator/)
+- The code to refresh the page on clicking 'restart the quiz' button was adapted from [this](https://sentry.io/answers/how-do-i-refresh-a-page-using-javascript/#:~:text=There%20are%20two%20Web%20API,()%20and%20history.go()%20._) article on Sentry.io
 

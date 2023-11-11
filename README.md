@@ -109,7 +109,8 @@ The live link is located here - [Friends Quiz](https://katiecampbs.github.io/fri
 
 ## Credits
 
-The code detailing the media query which was used to fix the hover bug mentioned above, was taken from [this](<https://www.geeksforgeeks.org/how-to-prevent-sticky-hover-effects-for-buttons-on-touch-devices/>) website
-The questions and answers were generated using [CHAT GPT](https://chat.openai.com/)
-The ‘Friends’ logo is from [this](<https://freebiesupply.com/logos/friends-logo/>) website
+  - The code detailing the media query which was used to fix the hover bug mentioned above, was taken from [this](<https://www.geeksforgeeks.org/how-to-prevent-sticky-hover-effects-for-buttons-on-touch-devices/>) website
+- The questions and answers were generated using [CHAT GPT](https://chat.openai.com/)
+- The ‘Friends’ logo is from [this](<https://freebiesupply.com/logos/friends-logo/>) website
+- Favicon created using [Favicon.io](https://favicon.io/favicon-generator/)
 

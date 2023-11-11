@@ -76,3 +76,34 @@ The website uses a sequential structure, based on one web page. This page was de
 ### Features Left to Implement
 
 - In the future there is potential to add levels to the quiz, so once the initial ten questions are answered, the user has the option to proceed onto level 2, and work through another set of questions. This would keep the user on the page longer, and even encourage them to revisit the page again another time. The questions could be updated regularly to increase the challenge.
+
+## Surface
+
+A background colour of lilac was used to remind the user of the tv show, as this colour is repeated throughout the show. Dark and light colour tones are used in contrast to make text stand out against background colours. This makes the site more accessible for the user. The buttons are clearly defined from the background. The hover function over the buttons (on devices that support this option) makes the quiz easier to navigate.
+
+## Testing
+I tested playing the game on different browsers e.g. Chrome and Safari
+I have run through both correct and incorrect answers to see that the correct alerts are received
+I confirmed that the colour contrast is accessible and easy to read using webaim.org
+I confirmed that the game looks good on different screen sizes, from phone size, tablets to laptops and larger screens
+
+## Bugs
+### Solved Bugs
+While testing the game on iPhone, I realised that the hover function on the buttons was malfunctioning. I realised after some searching online that this was a common problem with touch screen devices. The buttons remained highlighted after a user pressed on it, even once the game had moved onto the next question. I have resolved this problem by using a media query, so that the hover effect now only works on hover enabled devices.
+
+## Deployment
+The site was deployed in Github, using the following steps:
+
+- Under the repository name, click settings
+- Under the code and automation section, click 'pages'
+- Underneath 'build and deployment', under 'source', make sure 'Deploy from a branch' is selected
+- Under the 'branch' section, select 'main' and 'root', and click 'save'
+
+The live link is located here - [Friends Quiz](https://katiecampbs.github.io/friendsquiz/)
+
+## Credits
+
+The code detailing the media query which was used to fix the hover bug mentioned above, was taken from [this] (<https://www.geeksforgeeks.org/how-to-prevent-sticky-hover-effects-for-buttons-on-touch-devices/>) website
+The questions and answers were generated using [CHAT GPT](https://chat.openai.com/)
+The ‘Friends’ logo is from [this] (<https://freebiesupply.com/logos/friends-logo/>) website
+

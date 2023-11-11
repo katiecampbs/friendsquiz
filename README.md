@@ -90,11 +90,7 @@ I confirmed that the game looks good on different screen sizes, from phone size,
 ## Validator Testing
 
 - No errors were found in the HTML when testing with the official W3C Validator
-![Screenshot of W3c Validator](/assets/images/html-validator-test.png)
-
 - No errors were found in CSS when testing with the official Jigsaw validator
-![Screenshot of Jigsaw validator](/assets/images/css-validator-test.png)
-
 - No errors were found in Javascript when testing with JSHint JavaScript Validator
 
 ## Bugs

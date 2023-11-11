@@ -4,6 +4,45 @@ Friends Quiz is a responsive quiz for lovers of the tv show, "Friends". It is de
 
 ![Responsive Mockup](assets/images/friends-quiz-screenshot.png)
 
+# UX
+
+The site's intended users are customers, who are fans of the tv show ‘Friends’. The site is designed to be fun and entertaining, while providing some factual content. 
+
+## User stories
+
+- As a user, I want to navigate this website with ease and simplicity
+- As a user, I want to see how well I can do on the quiz
+- As a user, I want to test my knowledge
+- As a user, I want to be able to restart the quiz and beat my score
+
+## Strategy
+
+The intent of the website is to deliver a fun and informative quiz in a visually pleasing manner. This information will solve a problem for the user, such as the need for entertainment. The goal is to elicit a positive response in the user
+
+## Scope
+
+The features required to meet the user needs include:
+- A brief introduction to the quiz and what to expect
+- A clearly positioned question
+An answer section with the functionality to select one of the answers from multiple choices
+A score out of ten at the end of the quiz
+A refresh function that allows the user to start the quiz again
+
+## Structure
+
+- **One home/landing page**
+- **Heading section**  that briefly describes what the page is for
+- **Question section** that separates a question from the rest of the page using a box
+- **Answer section** with four multiple choice answers separated clearly as individual buttons
+- **Restart button** that allows the user to refresh the page and restart the quiz
+
+## Skeleton
+
+The website uses a sequential structure, based on one web page. This page was designed first in Balsamiq, which allowed for the layout to be loosely designed for different screen sizes beforehand
+
+![Wireframe](assets/images/friends-quiz-wireframe-desktop.png)
+![Wireframe](assets/images/friends-quiz-wireframe-phone.png)
+
 ## Features 
 
 ### Existing Features

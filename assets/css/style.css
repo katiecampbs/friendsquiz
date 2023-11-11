@@ -60,11 +60,6 @@ p {
     padding: 20px;
     font-weight: bold;
 }
-/*
-.btn:hover {
-    background: black;
-    color: white;
-}*/
 
 /*Responsive design for the button size on larger screens*/
 @media only screen and (min-width: 700px) {

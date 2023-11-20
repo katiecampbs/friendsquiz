@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentQuestionIndex = 0;
     let score = 0;
 
-    
-    
     //Inserts the first question from the question list into the paragraph with an id of "question"
     questionElement.textContent = questions[0].question;
     
@@ -41,11 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let currentQuestion = questions[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {
             button.style.backgroundColor = "green";
-            /** alert('Correct answer!'); */
             score = ++score;
         } else {
             button.style.backgroundColor = "red";
-            /** alert('Incorrect answer!'); */
         }
 
         // Reset button colors after a short delay and then move to the next question

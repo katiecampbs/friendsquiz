@@ -71,32 +71,46 @@ document.addEventListener("DOMContentLoaded", function() {
     buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
             const answer = questionList[currentQuestionIndex].answers[index];
-            checkAnswer(answer);
+            checkAnswer(answer, button);
         });
     });
+
+    function resetButtonColors() {
+        buttons.forEach(function (button) {
+            button.style.backgroundColor = ""; // Reset button color
+        });
+    }
     /**
      * Checks the answer on the button clicked against the answer in the questions list and displays an alert for the user
      */
-    function checkAnswer(answer) {
+    function checkAnswer(answer, button) {
         let currentQuestion = questionList[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {
-            alert('Correct answer!');
+            button.style.backgroundColor = "green";
+            /** alert('Correct answer!'); */
             score = ++score;
         } else {
-            alert('Incorrect answer!');
+            button.style.backgroundColor = "red";
+            /** alert('Incorrect answer!'); */
         }
 
-        //Increments the question list by one
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questionList.length) {
-            // Display the next question
-            questionElement.textContent = questionList[currentQuestionIndex].question;
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].textContent = questionList[currentQuestionIndex].answers[i];
+        // Reset button colors after a short delay and then move to the next question
+        setTimeout(function () {
+            resetButtonColors();
+
+            // Increment the question list by one
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questionList.length) {
+                // Display the next question
+                questionElement.textContent = questionList[currentQuestionIndex].question;
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].textContent = questionList[currentQuestionIndex].answers[i];
+                }
+            } else {
+                alert(`End of the quiz! You scored ${score} out of 10!`);
             }
-        } else {
-            alert(`End of the quiz! You scored ${score} out of 10!`);
-        }
+        }, 1000);
     }
 });
 

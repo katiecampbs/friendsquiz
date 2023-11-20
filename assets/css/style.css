@@ -79,7 +79,7 @@ button:hover {
 
 /*Only uses hover effect over buttons on devices that support this*/
 @media(hover: hover) {
-    #btn:hover {
+    button:hover {
         background: black;
         color:white;
     }

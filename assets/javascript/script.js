@@ -1,55 +1,7 @@
-let questionList = [
-    {
-        question: "What is the name of Ross and Monica's dog when they were kids?",
-        answers: ['Buster','Fluffy','Rex','Rover'],
-        correctAnswer: 'Buster'
-    },
-    {
-        question: "Which character famously yelled, 'We were on a break!' during the series?",
-        answers: ['Ross','Chandler','Joey','Phoebe'],
-        correctAnswer: 'Ross'
-    },
-    {
-        question: "What is the name of the coffee shop where the friends frequently hang out?",
-        answers: ['Central Perk','Java Jolt','Espresso Emporium','The Percolator'],
-        correctAnswer: 'Central Perk'
-    },
-    {
-        question: "Who played the role of Ross Geller in the TV show 'Friends'?",
-        answers: ['Matt LeBlanc','Matthew Perry','David Schwimmer','Courteney Cox'],
-        correctAnswer: 'David Schwimmer'
-    },
-    {
-        question: "What is the profession of Ross Geller in the show?",
-        answers: ['Paleontologist','Chef','Actor','Accountant'],
-        correctAnswer: 'Paleontologist'
-    },
-    {
-        question: "Which character briefly lived with a woman named Janice, known for her distinctive laugh?",
-        answers: ['Monica','Chandler','Phoebe','Joey'],
-        correctAnswer: 'Chandler'
-    },
-    {
-        question: "Which character is known for her famous song, 'Smelly Cat'?",
-        answers: ['Monica','Phoebe','Rachel','Janice'],
-        correctAnswer: 'Phoebe'
-    },
-    {
-        question: "What is the name of Ross and Monica's father?",
-        answers: ['Bob','Jack','Richard','George'],
-        correctAnswer: 'Jack'
-    },
-    {
-        question: "What does Joey not share?",
-        answers: ['His apartment','His food','His clothes','His acting tips'],
-        correctAnswer: 'His food'
-    },
-    {
-        question: "What is the name of the coffee shop employee who frequently serves the friends at Central Perk?",
-        answers: ['Gunther','Walter','Roger','Steven'],
-        correctAnswer: 'Gunther'
-    }
-];
+// Import the questionList from the external file
+import quizData from './questions.js';
+
+const questions = quizData.questionList;
 
 //The code will begin on the "DOMContentLoaded" event (once the page has fully loaded)
 document.addEventListener("DOMContentLoaded", function() {
@@ -61,18 +13,18 @@ document.addEventListener("DOMContentLoaded", function() {
     
     
     //Inserts the first question from the question list into the paragraph with an id of "question"
-    questionElement.textContent = questionList[0].question;
+    questionElement.textContent = questions[0].question;
     
     //Cycles through the answers in the first question on the list and inserts an answer as text content to each of the buttons
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].textContent = questionList[0].answers[i];
+        buttons[i].textContent = questions[0].answers[i];
     }
     /**
      * Runs the checkAnswer function in the event that any of the buttons are clicked
     */
     buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
-            const answer = questionList[currentQuestionIndex].answers[index];
+            const answer = questions[currentQuestionIndex].answers[index];
             checkAnswer(answer, button);
         });
     });
@@ -86,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
      * Checks the answer on the button clicked against the answer in the questions list and displays an alert for the user
      */
     function checkAnswer(answer, button) {
-        let currentQuestion = questionList[currentQuestionIndex];
+        let currentQuestion = questions[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {
             button.style.backgroundColor = "green";
             /** alert('Correct answer!'); */
@@ -103,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
             // Increment the question list by one
             currentQuestionIndex++;
 
-            if (currentQuestionIndex < questionList.length) {
+            if (currentQuestionIndex < questions.length) {
                 // Display the next question
-                questionElement.textContent = questionList[currentQuestionIndex].question;
+                questionElement.textContent = questions[currentQuestionIndex].question;
                 for (let i = 0; i < buttons.length; i++) {
-                    buttons[i].textContent = questionList[currentQuestionIndex].answers[i];
+                    buttons[i].textContent = questions[currentQuestionIndex].answers[i];
                 }
             } else {
                 alert(`End of the quiz! You scored ${score} out of 10!`);

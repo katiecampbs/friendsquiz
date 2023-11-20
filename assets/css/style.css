@@ -65,6 +65,11 @@ p {
     font-weight: bold;
 }
 
+/* Changes the cursor when hovering over a button*/
+button:hover {
+    cursor: pointer;
+}
+
 /*Responsive design for the button size on larger screens*/
 @media only screen and (min-width: 700px) {
    body {

@@ -57,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.querySelectorAll(".btn");
     let currentQuestionIndex = 0;
     let score = 0;
+
+    
     
     //Inserts the first question from the question list into the paragraph with an id of "question"
     questionElement.textContent = questionList[0].question;

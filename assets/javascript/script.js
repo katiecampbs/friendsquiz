@@ -4,7 +4,7 @@ import quizData from './questions.js';
 const questions = quizData.questionList;
 
 //The code will begin on the "DOMContentLoaded" event (once the page has fully loaded)
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function runQuiz() {
     let questionElement = document.getElementById("question");
     let buttons = document.querySelectorAll(".btn");
     let currentQuestionIndex = 0;
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    /** Resets the button colour after it appears red or green */
     function resetButtonColors() {
         buttons.forEach(function (button) {
             button.style.backgroundColor = ""; // Reset button color
@@ -64,12 +65,18 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }, 1000);
     }
-});
+};
+
+const refreshBtn = document.getElementById("btn-refresh");
+function handleClick() {
+    runQuiz;
+}
+refreshBtn.addEventListener("click", handleClick);
 
 //Code from sentry.io which refreshes the page on click of the button
-const refreshBtn = document.getElementById("btn-refresh");
+/**const refreshBtn = document.getElementById("btn-refresh");
 function handleClick() {
     window.location.reload();
 }
-refreshBtn.addEventListener("click", handleClick);
+refreshBtn.addEventListener("click", handleClick); */
 

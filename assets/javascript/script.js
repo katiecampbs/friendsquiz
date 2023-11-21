@@ -2,17 +2,12 @@
 import quizData from './questions.js';
 
 const questions = quizData.questionList;
+let questionElement, buttons, currentQuestionIndex, score, scoreContainer;
 
-//The code will begin on the "DOMContentLoaded" event (once the page has fully loaded)
-document.addEventListener("DOMContentLoaded", function runQuiz() {
-    let questionElement = document.getElementById("question");
-    let buttons = document.querySelectorAll(".btn");
-    let currentQuestionIndex = 0;
-    let score = 0;
-
+function runQuiz() {
     //Inserts the first question from the question list into the paragraph with an id of "question"
     questionElement.textContent = questions[0].question;
-    
+
     //Cycles through the answers in the first question on the list and inserts an answer as text content to each of the buttons
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].textContent = questions[0].answers[i];
@@ -20,14 +15,13 @@ document.addEventListener("DOMContentLoaded", function runQuiz() {
     /**
      * Runs the checkAnswer function in the event that any of the buttons are clicked
     */
-    buttons.forEach(function(button, index) {
-        button.addEventListener("click", function() {
+    buttons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
             const answer = questions[currentQuestionIndex].answers[index];
             checkAnswer(answer, button);
         });
     });
 
-    /** Resets the button colour after it appears red or green */
     function resetButtonColors() {
         buttons.forEach(function (button) {
             button.style.backgroundColor = ""; // Reset button color
@@ -60,23 +54,27 @@ document.addEventListener("DOMContentLoaded", function runQuiz() {
                 }
             } else {
                 // Quiz is completed, replace the content with the score
-                const scoreContainer = document.getElementById("score-container");
+                scoreContainer = document.getElementById("score-container");
                 scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>You scored: ${score} out of 10!</p>`;
             }
         }, 1000);
     }
 };
+        
+// The code will begin on the "DOMContentLoaded" event (once the page has fully loaded)
+document.addEventListener("DOMContentLoaded", function () {
+    questionElement = document.getElementById("question");
+    buttons = document.querySelectorAll(".btn");
+    currentQuestionIndex = 0;
+    score = 0;
+    runQuiz();
+});
 
-const refreshBtn = document.getElementById("btn-refresh");
+let refreshBtn = document.getElementById("btn-refresh");
 function handleClick() {
-    runQuiz;
+    score = 0;
+    currentQuestionIndex = 0;
+    scoreContainer.innerHTML = ""; // Clear score container
+    runQuiz();
 }
 refreshBtn.addEventListener("click", handleClick);
-
-//Code from sentry.io which refreshes the page on click of the button
-/**const refreshBtn = document.getElementById("btn-refresh");
-function handleClick() {
-    window.location.reload();
-}
-refreshBtn.addEventListener("click", handleClick); */
-

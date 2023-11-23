@@ -24,6 +24,9 @@ let questionListOne = [
         answers: ['Paleontologist', 'Chef', 'Actor', 'Accountant'],
         correctAnswer: 'Paleontologist'
     },
+];
+
+let questionListTwo = [
     {
         question: "Which character briefly lived with a woman named Janice, known for her distinctive laugh?",
         answers: ['Monica', 'Chandler', 'Phoebe', 'Joey'],
@@ -48,9 +51,37 @@ let questionListOne = [
         question: "What is the name of the coffee shop employee who frequently serves the friends at Central Perk?",
         answers: ['Gunther', 'Walter', 'Roger', 'Steven'],
         correctAnswer: 'Gunther'
-    }
+    },
 ];
 
+let questionListThree = [
+    {
+        question: "What is Joey's catchphrase?",
+        answers: ['How you doin\'?', 'What\'s up?', 'Hey there!', 'Greetings!'],
+        correctAnswer: 'How you doin\'?'
+    },
+    {
+        question: "What is the profession of Chandler Bing?",
+        answers: ['Actor', 'Chef', 'Accountant', 'Advertising Executive'],
+        correctAnswer: 'Advertising Executive'
+    },
+    {
+        question: "Which character accidentally threw a woman's wooden leg into a fire?",
+        answers: ['Ross', 'Joey', 'Chandler', 'Monica'],
+        correctAnswer: 'Joey'
+    },
+    {
+        question: "What is the name of Ross's second wife?",
+        answers: ['Emily', 'Janice', 'Carol', 'Susan'],
+        correctAnswer: 'Emily'
+    },
+    {
+        question: "What game did the friends play to decide who would have to move out of Monica's apartment?",
+        answers: ['Rock, Paper, Scissors', 'Flip the Coin', 'Spin the Bottle', 'Russian Roulette'],
+        correctAnswer: 'Rock, Paper, Scissors'
+    },
+]
+
 export default {
-    questionListOne
+    questionListOne, questionListTwo, questionListThree
 }

@@ -44,6 +44,11 @@ The website uses a sequential structure, based on one web page. This page was de
 ![Wireframe](assets/images/friends-quiz-wireframe-desktop.png)
 ![Wireframe](assets/images/friends-quiz-wireframe-phone.png)
 
+## Surface
+
+![Colour scheme](friends-colour-scheme.png)
+A colour palette using lilac as the predominant colour is used to feel familiar to the brand of the tv show, because of it is instantly recognisable to fans. This is accented with a contrasting colour of green.
+
 ## Features
 
 ### Existing Features

@@ -5,15 +5,15 @@ const questions = quizData.questionList;
 let questionElement, buttons, currentQuestionIndex, score, scoreContainer;
 
 function runQuiz() {
-    //Inserts the first question from the question list into the paragraph with an id of "question"
+    //Insert the first question from the question list into the paragraph with an id of "question"
     questionElement.textContent = questions[0].question;
 
-    //Cycles through the answers in the first question on the list and inserts an answer as text content to each of the buttons
+    //Cycle through the answers in the first question on the list and inserts an answer as text content to each of the buttons
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].textContent = questions[0].answers[i];
     }
     /**
-     * Runs the checkAnswer function in the event that any of the buttons are clicked
+     * Run the checkAnswer function in the event that any of the buttons are clicked
     */
     buttons.forEach(function (button, index) {
         button.addEventListener("click", function () {
@@ -22,13 +22,14 @@ function runQuiz() {
         });
     });
 
+    /** Reset the answer button colour after it has turned red or green to show if answer is correct */
     function resetButtonColors() {
         buttons.forEach(function (button) {
             button.style.backgroundColor = ""; // Reset button color
         });
     }
     /**
-     * Checks the answer on the button clicked against the answer in the questions list and displays an alert for the user
+     * Check the answer on the button clicked against the answer in the questions list and displays an alert for the user
      */
     function checkAnswer(answer, button) {
         let currentQuestion = questions[currentQuestionIndex];
@@ -39,7 +40,7 @@ function runQuiz() {
             button.style.backgroundColor = "red";
         }
 
-        // Reset button colors after a short delay and then move to the next question
+        // Reset button colors using a function after a short delay, and then move to the next question
         setTimeout(function () {
             resetButtonColors();
 
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     runQuiz();
 });
 
+// Listen for the refresh button to be clicked. If clicked it triggers the quiz to start from the beginning
 let refreshBtn = document.getElementById("btn-refresh");
 function handleClick() {
     score = 0;

@@ -4,7 +4,7 @@ import quizData from './questions.js';
 const questionsOne = quizData.questionListOne;
 const questionsTwo = quizData.questionListTwo;
 const questionsThree = quizData.questionListThree;
-let questionElement, buttons, currentQuestionIndex, score, scoreContainer;
+let questionElement, buttons, currentQuestionIndex, score, scoreTwo, scoreThree, scoreContainer;
 
 function runRoundOne() {
     //Insert the first question from the question list into the paragraph with an id of "question"
@@ -37,7 +37,7 @@ function runRoundOne() {
         let currentQuestion = questionsOne[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {
             button.style.backgroundColor = "green";
-            score = ++score;
+            score++;
         } else {
             button.style.backgroundColor = "red";
         }
@@ -65,6 +65,13 @@ function runRoundOne() {
 };
 
 function runRoundTwo() {
+    // Reset variables and run the second round
+    scoreTwo = 0;
+    currentQuestionIndex = 0;
+    scoreContainer.innerHTML = ""; // Clear score container
+    questionElement = document.getElementById("question");
+    buttons = document.querySelectorAll(".btn");
+
     //Insert the first question from the question list into the paragraph with an id of "question"
     questionElement.textContent = questionsTwo[0].question;
 
@@ -95,7 +102,7 @@ function runRoundTwo() {
         let currentQuestion = questionsTwo[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {
             button.style.backgroundColor = "green";
-            score = ++score;
+            scoreTwo++;
         } else {
             button.style.backgroundColor = "red";
         }
@@ -116,13 +123,20 @@ function runRoundTwo() {
             } else {
                 // Quiz is completed, replace the content with the score
                 scoreContainer = document.getElementById("score-container");
-                scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>On round two you scored: ${score} out of 5!</p><button class="btn--restart" id="start-round-three-btn">Start round three</button>`;
+                scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>On round two you scored: ${scoreTwo} out of 5!</p><button class="btn--restart" id="start-round-three-btn">Start round three</button>`;
             }
         }, 1000);
     }
 };
 
 function runRoundThree() {
+    // Reset variables and run the second round
+    scoreThree = 0;
+    currentQuestionIndex = 0;
+    scoreContainer.innerHTML = ""; // Clear score container
+    questionElement = document.getElementById("question");
+    buttons = document.querySelectorAll(".btn");
+
     //Insert the first question from the question list into the paragraph with an id of "question"
     questionElement.textContent = questionsThree[0].question;
 
@@ -153,7 +167,7 @@ function runRoundThree() {
         let currentQuestion = questionsThree[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {
             button.style.backgroundColor = "green";
-            score = ++score;
+            scoreThree++;
         } else {
             button.style.backgroundColor = "red";
         }
@@ -174,7 +188,7 @@ function runRoundThree() {
             } else {
                 // Quiz is completed, replace the content with the score
                 scoreContainer = document.getElementById("score-container");
-                scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>On round three you scored: ${score} out of 5!</p>`;
+                scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>On round three you scored: ${scoreThree} out of 5!</p>`;
             }
         }, 1000);
     }
@@ -192,24 +206,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Listen for the refresh button to be clicked. If clicked, it triggers the quiz to start from the beginning
     let refreshBtn = document.getElementById("btn-refresh");
     refreshBtn.addEventListener("click", handleClick);
+});
 
-    // Set up event delegation for the "Start round two" button
-    document.addEventListener("click", function (event) {
-        // Check if the clicked element is the "Start round two" button
-        if (event.target.id === "start-round-two-btn") {
-            // Reset variables and run the second round
-            score = 0;
-            currentQuestionIndex = 0;
-            scoreContainer.innerHTML = ""; // Clear score container
-            runRoundTwo();
-        }
-        if (event.target.id === "start-round-three-btn") {
-            // Reset variables and run the second round
-            score = 0;
-            currentQuestionIndex = 0;
-            scoreContainer.innerHTML = ""; // Clear score container
-        }
-    });
+// Set up event delegation for the "Start round two" button
+document.addEventListener("click", function (event) {
+    // Check if the clicked element is the "Start round two" button
+    if (event.target.id === "start-round-two-btn") {
+        runRoundTwo();
+    }
+    if (event.target.id === "start-round-three-btn") {
+        // Reset variables and run the second round
+        runRoundThree();
+    }
 });
 
 function handleClick() {

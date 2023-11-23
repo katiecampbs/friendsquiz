@@ -24,9 +24,6 @@ let questionList = [
         answers: ['Paleontologist', 'Chef', 'Actor', 'Accountant'],
         correctAnswer: 'Paleontologist'
     },
-];
-
-let questionListTwo = [
     {
         question: "Which character briefly lived with a woman named Janice, known for her distinctive laugh?",
         answers: ['Monica', 'Chandler', 'Phoebe', 'Joey'],
@@ -52,9 +49,6 @@ let questionListTwo = [
         answers: ['Gunther', 'Walter', 'Roger', 'Steven'],
         correctAnswer: 'Gunther'
     },
-];
-
-let questionListThree = [
     {
         question: "What is Joey's catchphrase?",
         answers: ['How you doin\'?', 'What\'s up?', 'Hey there!', 'Greetings!'],
@@ -80,8 +74,8 @@ let questionListThree = [
         answers: ['Rock, Paper, Scissors', 'Flip the Coin', 'Spin the Bottle', 'Russian Roulette'],
         correctAnswer: 'Rock, Paper, Scissors'
     },
-]
+];
 
 export default {
-    questionList, questionListTwo, questionListThree
-}
+    questionList
+};

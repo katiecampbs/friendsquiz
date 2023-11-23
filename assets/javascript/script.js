@@ -1,23 +1,23 @@
 // Import the questionList from the external file
 import quizData from './questions.js';
 
-const questions = quizData.questionList;
+const questionsOne = quizData.questionListOne;
 let questionElement, buttons, currentQuestionIndex, score, scoreContainer;
 
-function runQuiz() {
+function runRoundOne() {
     //Insert the first question from the question list into the paragraph with an id of "question"
-    questionElement.textContent = questions[0].question;
+    questionElement.textContent = questionsOne[0].question;
 
     //Cycle through the answers in the first question on the list and inserts an answer as text content to each of the buttons
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].textContent = questions[0].answers[i];
+        buttons[i].textContent = questionsOne[0].answers[i];
     }
     /**
      * Run the checkAnswer function in the event that any of the buttons are clicked
     */
     buttons.forEach(function (button, index) {
         button.addEventListener("click", function () {
-            const answer = questions[currentQuestionIndex].answers[index];
+            const answer = questionsOne[currentQuestionIndex].answers[index];
             checkAnswer(answer, button);
         });
     });
@@ -32,7 +32,7 @@ function runQuiz() {
      * Check the answer on the button clicked against the answer in the questions list and displays an alert for the user
      */
     function checkAnswer(answer, button) {
-        let currentQuestion = questions[currentQuestionIndex];
+        let currentQuestion = questionsOne[currentQuestionIndex];
         if (answer === currentQuestion.correctAnswer) {
             button.style.backgroundColor = "green";
             score = ++score;
@@ -47,11 +47,11 @@ function runQuiz() {
             // Increment the question list by one
             currentQuestionIndex++;
 
-            if (currentQuestionIndex < questions.length) {
+            if (currentQuestionIndex < questionsOne.length) {
                 // Display the next question
-                questionElement.textContent = questions[currentQuestionIndex].question;
+                questionElement.textContent = questionsOne[currentQuestionIndex].question;
                 for (let i = 0; i < buttons.length; i++) {
-                    buttons[i].textContent = questions[currentQuestionIndex].answers[i];
+                    buttons[i].textContent = questionsOne[currentQuestionIndex].answers[i];
                 }
             } else {
                 // Quiz is completed, replace the content with the score
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentQuestionIndex = 0;
     scoreContainer = document.getElementById("score-container"); // Initialize score container
     score = 0;
-    runQuiz();
+    runRoundOne();
 });
 
 // Listen for the refresh button to be clicked. If clicked it triggers the quiz to start from the beginning
@@ -78,6 +78,6 @@ function handleClick() {
     score = 0;
     currentQuestionIndex = 0;
     scoreContainer.innerHTML = ""; // Clear score container
-    runQuiz();
+    runRoundOne();
 }
 refreshBtn.addEventListener("click", handleClick);

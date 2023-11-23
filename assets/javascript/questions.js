@@ -1,4 +1,4 @@
-let questionList = [
+let questionListOne = [
     {
         question: "What is the name of Ross and Monica's dog when they were kids?",
         answers: ['Buster', 'Fluffy', 'Rex', 'Rover'],

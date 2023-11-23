@@ -116,7 +116,65 @@ function runRoundTwo() {
             } else {
                 // Quiz is completed, replace the content with the score
                 scoreContainer = document.getElementById("score-container");
-                scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>On round two you scored: ${score} out of 5!</p>`;
+                scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>On round two you scored: ${score} out of 5!</p><button class="btn--restart" id="start-round-three-btn">Start round three</button>`;
+            }
+        }, 1000);
+    }
+};
+
+function runRoundThree() {
+    //Insert the first question from the question list into the paragraph with an id of "question"
+    questionElement.textContent = questionsThree[0].question;
+
+    //Cycle through the answers in the first question on the list and inserts an answer as text content to each of the buttons
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].textContent = questionsThree[0].answers[i];
+    }
+    /**
+     * Run the checkAnswer function in the event that any of the buttons are clicked
+    */
+    buttons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
+            const answer = questionsThree[currentQuestionIndex].answers[index];
+            checkAnswer(answer, button);
+        });
+    });
+
+    /** Reset the answer button colour after it has turned red or green to show if answer is correct */
+    function resetButtonColors() {
+        buttons.forEach(function (button) {
+            button.style.backgroundColor = ""; // Reset button color
+        });
+    }
+    /**
+     * Check the answer on the button clicked against the answer in the questions list and displays an alert for the user
+     */
+    function checkAnswer(answer, button) {
+        let currentQuestion = questionsThree[currentQuestionIndex];
+        if (answer === currentQuestion.correctAnswer) {
+            button.style.backgroundColor = "green";
+            score = ++score;
+        } else {
+            button.style.backgroundColor = "red";
+        }
+
+        // Reset button colors using a function after a short delay, and then move to the next question
+        setTimeout(function () {
+            resetButtonColors();
+
+            // Increment the question list by one
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questionsThree.length) {
+                // Display the next question
+                questionElement.textContent = questionsThree[currentQuestionIndex].question;
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].textContent = questionsThree[currentQuestionIndex].answers[i];
+                }
+            } else {
+                // Quiz is completed, replace the content with the score
+                scoreContainer = document.getElementById("score-container");
+                scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>On round three you scored: ${score} out of 5!</p>`;
             }
         }, 1000);
     }
@@ -144,6 +202,12 @@ document.addEventListener("DOMContentLoaded", function () {
             currentQuestionIndex = 0;
             scoreContainer.innerHTML = ""; // Clear score container
             runRoundTwo();
+        }
+        if (event.target.id === "start-round-three-btn") {
+            // Reset variables and run the second round
+            score = 0;
+            currentQuestionIndex = 0;
+            scoreContainer.innerHTML = ""; // Clear score container
         }
     });
 });

@@ -1,4 +1,4 @@
-let questionListOne = [
+let questionList = [
     {
         question: "What is the name of Ross and Monica's dog when they were kids?",
         answers: ['Buster', 'Fluffy', 'Rex', 'Rover'],
@@ -83,5 +83,5 @@ let questionListThree = [
 ]
 
 export default {
-    questionListOne, questionListTwo, questionListThree
+    questionList, questionListTwo, questionListThree
 }

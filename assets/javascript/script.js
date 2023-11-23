@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     questionElement = document.getElementById("question");
     buttons = document.querySelectorAll(".btn");
     currentQuestionIndex = 0;
+    scoreContainer = document.getElementById("score-container"); // Initialize score container
     score = 0;
     runQuiz();
 });

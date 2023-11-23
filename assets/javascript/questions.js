@@ -52,5 +52,5 @@ let questionListOne = [
 ];
 
 export default {
-    questionList
+    questionListOne
 }

@@ -19,35 +19,42 @@
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <!-- Logo -->
-    <div class="container">
-        <img src="assets/images/friendslogo.png" alt="friends logo" class="friends-logo">
-    </div>
-    <!-- Headings -->
-    <div class="headings container">
-        <h1>How well do you know Friends?</h1>
-        <h2>Take the quiz to find out!</h2>
-    </div>
-    <!-- Score containter. This will only appear visible at the end once all questions have been answered -->
-    <div id="score-container"> 
-    </div>
-    <!-- Question box -->
-    <div class="question container">
-        <p id="question"></p>
-    </div>
-    <!-- Answer buttons -->
-    <div class="buttons container">
-        <button class="btn button-width" ></button>
-        <button class="btn button-width"></button>
-        <button class="btn button-width"></button>
-        <button class="btn button-width"></button>
-    </div>
+    <!-- Header -->
+    <header>
+        <!-- Logo -->
+        <div class="container">
+            <img src="assets/images/friendslogo.png" alt="friends logo" class="friends-logo">
+        </div>
+        <!-- Headings -->
+        <div class="headings container">
+            <h1>How well do you know Friends?</h1>
+            <h2>Take the quiz to find out!</h2>
+        </div>
+    </header>
 
-    <!-- Separate button that restarts the quiz -->
-    <div class="buttons container">
-        <button class="btn--restart" id="btn-refresh">Start again</button>
-    </div>
-    
+    <!-- Main content -->
+    <main>
+        <!-- Score containter. This will only appear visible at the end once all questions have been answered -->
+        <div id="score-container">
+        </div>
+        <!-- Question box -->
+        <div class="question container">
+            <p id="question"></p>
+        </div>
+        <!-- Answer buttons -->
+        <div class="buttons container">
+            <button class="btn button-width"></button>
+            <button class="btn button-width"></button>
+            <button class="btn button-width"></button>
+            <button class="btn button-width"></button>
+        </div>
+        
+        <!-- Separate button that restarts the quiz -->
+        <div class="buttons container">
+            <button class="btn--restart" id="btn-refresh">Start again</button>
+        </div>
+    </main>
+
     <script type="module" src="assets/javascript/script.js"></script>
 </body>
 </html>

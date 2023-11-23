@@ -1,6 +1,7 @@
 /* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:wght@200;300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Main styles*/
 body {
     font-family: "Nunito", sans-serif;
     background: #9c8cd4;
@@ -18,18 +19,12 @@ body {
     width: 180px;
 }
 
-h1 {
+/* Align text centrally for main headings and paragraphs*/
+h1, h2, p {
     text-align:center;
 }
 
-h2 {
-    text-align:center;
-}
-
-p {
-    text-align:center;
-}
-
+/* Styles the question box*/
 .question {
     font-weight:bold;
     background: white;
@@ -39,11 +34,11 @@ p {
     margin:20px;
 }
 
+/* Button styles*/
 .buttons {
     padding:10px 10px;
     margin:20px;
 }
-
 
 .btn {
     align-items:center;

@@ -46,8 +46,13 @@ The website uses a sequential structure, based on one web page. This page was de
 
 ## Surface
 
-![Colour scheme](friends-colour-scheme.png)
-A colour palette using lilac as the predominant colour is used to feel familiar to the brand of the tv show, because of it is instantly recognisable to fans. This is accented with a contrasting colour of green.
+![Colour scheme](assets/images/friends-colour-scheme.png)
+ 
+A background colour of lilac was used to remind the user of the tv show, as this colour is repeated throughout the show. This is accented with a contrasting colour of green. Dark and light colour tones are used in contrast to make text stand out against background colours. This makes the site more accessible for the user. The buttons are clearly defined from the background. 
+
+The hover function over the buttons (on devices that support this option) makes the quiz easier to navigate. Buttons turn black as you pass over them, as well as the cursor appearance changing.
+
+![Hover function](assets/images/hover-function.png)
 
 ## Features
 
@@ -68,31 +73,32 @@ A colour palette using lilac as the predominant colour is used to feel familiar 
 - **The Quiz Section**
 
   - This section comprises of a question box and four multiple choice answers below each question. As the user hovers over the answers with their mouse, each will be highlighted.
-  - The user will be able to submit their answer and a pop-up will make it known to the user if they answered correctly. The quiz will then automatically generate the next question when the user clicks okay.
+  - The user will be able to submit their answer and the button will temporarily turn green or red depending on the user entering a correct or incorrect answer.
+  ![Correct answer](assets/images/green-button.png)
+  - The quiz will then automatically generate the next question after a period of a few seconds
 
 ![Quiz](assets/images/quiz.png)
 
 - **Restart Button**
 
   - This section has a button specifically to allow the user to restart the page, for instance if they want to beat their own score.
-  - When the user presses the button, the page is refreshed so that the first question is shown again.
+  - When the user presses the button, the quiz is refreshed so that the first question is shown again.
 
 ![Restart](assets/images/restart.png)
 
 ### Features Left to Implement
 
-- In the future there is potential to add levels to the quiz, so once the initial ten questions are answered, the user has the option to proceed onto level 2, and work through another set of questions. This would keep the user on the page longer, and even encourage them to revisit the page again another time. The questions could be updated regularly to increase the challenge.
-
-## Surface
-
-A background colour of lilac was used to remind the user of the tv show, as this colour is repeated throughout the show. Dark and light colour tones are used in contrast to make text stand out against background colours. This makes the site more accessible for the user. The buttons are clearly defined from the background. The hover function over the buttons (on devices that support this option) makes the quiz easier to navigate.
+- In the future there is potential to add levels to the quiz, so once the initial 15 questions are answered, the user has the option to proceed onto level 2, and work through another set of questions. This would keep the user on the page longer, and even encourage them to revisit the page again another time. The questions could be updated regularly to increase the challenge.
+- A timer function could be implemented to make the game more exciting
+- User details could be taken so that all messaging to the user is personalised ie. when the score is delivered at the end, a name could also be included
 
 ## Testing
 
 I tested playing the game on different browsers e.g. Chrome and Safari
-I have run through both correct and incorrect answers to see that the correct alerts are received
-I confirmed that the colour contrast is accessible and easy to read using webaim.org
-I confirmed that the game looks good on different screen sizes, from phone size, tablets to laptops and larger screens
+I have run through both correct and incorrect answers to see that the correct colours are displayed on the buttons
+I have tested that the hover function works on devices where this is enabled, and that it is disabled on touch screen devices
+I have confirmed that the colour contrast is accessible and easy to read using webaim.org
+I have confirmed that the game looks good on different screen sizes, from phone size, tablets to laptops and larger screens
 
 ## Validator Testing
 

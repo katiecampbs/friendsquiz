@@ -111,9 +111,9 @@ The hover function over the buttons (on devices that support this option) makes 
 
 ## Validator Testing
 
-- No errors were found in the HTML when testing with the official W3C Validator [HTML Validator](assets/images/html-checker.png)
-- No errors were found in CSS when testing with the official Jigsaw validator [CSS Validator](assets/images/w3c-validator.png)
-- No errors were found in Javascript when testing with JSHint JavaScript Validator [JShint Validator](assets/images/jshint.png)
+- No errors were found in the HTML when testing with the official W3C Validator ![HTML Validator](assets/images/html-checker.png)
+- No errors were found in CSS when testing with the official Jigsaw validator ![CSS Validator](assets/images/w3c-validator.png)
+- No errors were found in Javascript when testing with JSHint JavaScript Validator ![JShint Validator](assets/images/jshint.png)
 
 ## Bugs
 

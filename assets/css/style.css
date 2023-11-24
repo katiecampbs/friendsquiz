@@ -58,6 +58,15 @@ h1, h2, p {
     font-weight: bold;
 }
 
+/* Styling the container that the scores appear in at the end*/
+#score-container {
+    border-style: solid;
+    border-radius: 10px;
+    background: #b6c799;
+    padding:15px;
+    margin: 20px;
+}
+
 /* Changes the cursor when hovering over a button*/
 button:hover {
     cursor: pointer;

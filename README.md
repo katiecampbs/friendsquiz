@@ -13,6 +13,7 @@ The site's intended users are customers, who are fans of the tv show ‘Friends�
 - As a user, I want to navigate this website with ease and simplicity
 - As a user, I want to see how well I can do on the quiz
 - As a user, I want to test my knowledge
+- As a user, I want to be able to see how many questions I answer correctly
 - As a user, I want to be able to restart the quiz and beat my score
 
 ## Strategy
@@ -25,9 +26,10 @@ The features required to meet the user needs include:
 
 - A brief introduction to the quiz and what to expect
 - A clearly positioned question
-An answer section with the functionality to select one of the answers from multiple choices
-A score out of ten at the end of the quiz
-A refresh function that allows the user to start the quiz again
+- An answer section with the functionality to select one of the answers from multiple choices
+- A clear indication as to whether they have answered correctly
+- A score out of 15 at the end of the quiz
+- A refresh function that allows the user to start the quiz again
 
 ## Structure
 
@@ -79,6 +81,13 @@ The hover function over the buttons (on devices that support this option) makes 
 
 ![Quiz](assets/images/quiz.png)
 
+- **Score Container**
+
+  - This section is only visible at the end of the quiz, once the user has answered all the questions
+  - User score is calculated
+
+![Score container](assets/images/score-container.png)
+
 - **Restart Button**
 
   - This section has a button specifically to allow the user to restart the page, for instance if they want to beat their own score.
@@ -94,11 +103,11 @@ The hover function over the buttons (on devices that support this option) makes 
 
 ## Testing
 
-I tested playing the game on different browsers e.g. Chrome and Safari
-I have run through both correct and incorrect answers to see that the correct colours are displayed on the buttons
-I have tested that the hover function works on devices where this is enabled, and that it is disabled on touch screen devices
-I have confirmed that the colour contrast is accessible and easy to read using webaim.org
-I have confirmed that the game looks good on different screen sizes, from phone size, tablets to laptops and larger screens
+- I tested playing the game on different browsers e.g. Chrome and Safari
+- I have run through both correct and incorrect answers to see that the correct colours are displayed on the buttons
+- I have tested that the hover function works on devices where this is enabled, and that it is disabled on touch screen devices
+- I have confirmed that the colour contrast is accessible and easy to read using webaim.org
+- I have confirmed that the game looks good on different screen sizes, from phone size, tablets to laptops and larger screens
 
 ## Validator Testing
 
@@ -129,4 +138,3 @@ The live link is located here - [Friends Quiz](https://katiecampbs.github.io/fri
 - The questions and answers were generated using [CHAT GPT](https://chat.openai.com/)
 - The ‘Friends’ logo is from [this](<https://freebiesupply.com/logos/friends-logo/>) website
 - Favicon created using [Favicon.io](https://favicon.io/favicon-generator/)
-- The code to refresh the page on clicking 'restart the quiz' button was adapted from [this](https://sentry.io/answers/how-do-i-refresh-a-page-using-javascript/#:~:text=There%20are%20two%20Web%20API,()%20and%20history.go()%20._) article on Sentry.io

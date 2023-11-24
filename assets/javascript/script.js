@@ -56,7 +56,7 @@ function runQuiz() {
             } else {
                 // Quiz is completed, replace the content with the score
                 scoreContainer = document.getElementById("score-container");
-                scoreContainer.innerHTML = `<h1>Quiz Score</h1><p>You scored: ${score} out of 15!</p>`;
+                scoreContainer.innerHTML = `<div class="score-container-styling"><h1>Quiz Score</h1><p>You scored: ${score} out of 15!</p></div>`;
             }
         }, 1000);
     }

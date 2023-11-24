@@ -5,14 +5,14 @@
 body {
     font-family: "Nunito", sans-serif;
     background: #9c8cd4;
-    }
+}
 
-/* Centers the main content on the page */   
+/* Centers the main content on the page */
 .container {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .friends-logo {
@@ -20,50 +20,52 @@ body {
 }
 
 /* Align text centrally for main headings and paragraphs*/
-h1, h2, p {
-    text-align:center;
+h1,
+h2,
+p {
+    text-align: center;
 }
 
 /* Styles the question box*/
 .question {
-    font-weight:bold;
+    font-weight: bold;
     background: white;
     border-radius: 10px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0.5, 0.5);
-    padding:10px;
-    margin:20px;
+    padding: 10px;
+    margin: 20px;
 }
 
 /* Button styles*/
 .buttons {
-    padding:10px 10px;
-    margin:20px;
+    padding: 10px 10px;
+    margin: 20px;
 }
 
 .btn {
-    align-items:center;
-    width:100%;
+    align-items: center;
+    width: 100%;
     background: white;
     border-radius: 10px;
-    padding:20px;
+    padding: 20px;
     margin: 10px;
 }
 
 .btn--restart {
-    background:#b6c799;
-    color:black;
-    width:fit-content;
+    background: #b6c799;
+    color: black;
+    width: fit-content;
     border-radius: 10px;
     padding: 20px;
     font-weight: bold;
 }
 
 /* Styling the container that the scores appear in at the end*/
-#score-container {
+.score-container-styling {
     border-style: solid;
     border-radius: 10px;
     background: #b6c799;
-    padding:15px;
+    padding: 15px;
     margin: 20px;
 }
 
@@ -74,15 +76,15 @@ button:hover {
 
 /*Responsive design for the button size on larger screens*/
 @media only screen and (min-width: 700px) {
-   body {
-    margin: 0 20%;
-   }
+    body {
+        margin: 0 20%;
+    }
 }
 
 /*Only uses hover effect over buttons on devices that support this*/
 @media(hover: hover) {
     button:hover {
         background: black;
-        color:white;
+        color: white;
     }
 }

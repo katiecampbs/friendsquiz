@@ -60,7 +60,7 @@ function runQuiz() {
             }
         }, 1000);
     }
-};
+}
 
 // The code will begin on the "DOMContentLoaded" event (once the page has fully loaded)
 document.addEventListener("DOMContentLoaded", function () {

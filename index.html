@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta
-      name="description"
-      content="Friends Quiz. Test your knowledge!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Friends Quiz. Test your knowledge!" />
     <meta
       name="keywords"
-      content="quiz, friends, tv show, hollywood, entertainment">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+      content="quiz, friends, tv show, hollywood, entertainment"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Friends Quiz</title>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-</head>
-<body>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <!-- Logo -->
-        <div class="container">
-            <img src="assets/images/friendslogo.png" alt="friends logo" class="friends-logo">
-        </div>
-        <!-- Headings -->
-        <div class="headings container">
-            <h1>How well do you know Friends?</h1>
-            <h2>Take the quiz to find out!</h2>
-        </div>
+      <!-- Logo -->
+      <div class="container">
+        <img
+          src="assets/images/friendslogo.png"
+          alt="friends logo"
+          class="friends-logo"
+        />
+      </div>
+      <!-- Headings -->
+      <div class="headings container">
+        <h1>How well do you know Friends?</h1>
+        <h2>Take the quiz to find out!</h2>
+      </div>
     </header>
 
     <!-- Main content -->
     <main>
-        <!-- Score containter. This will only appear visible at the end once all questions have been answered -->
-        <div id="score-container" class="container">
-        </div>
-        <!-- Question box -->
-        <div class="question container">
-            <p id="question"></p>
-        </div>
-        <!-- Answer buttons -->
-        <div class="buttons container">
-            <button class="btn button-width"></button>
-            <button class="btn button-width"></button>
-            <button class="btn button-width"></button>
-            <button class="btn button-width"></button>
-        </div>
-        
-        <!-- Separate button that restarts the quiz -->
-        <div class="buttons container">
-            <button class="btn--restart" id="btn-refresh">Start again</button>
-        </div>
+      <!-- Score containter. This will only appear visible at the end once all questions have been answered -->
+      <div id="score-container" class="container"></div>
+      <!-- Question box -->
+      <div class="question container">
+        <p id="question"></p>
+      </div>
+      <!-- Answer buttons -->
+      <div class="buttons container">
+        <button class="btn button-width"></button>
+        <button class="btn button-width"></button>
+        <button class="btn button-width"></button>
+        <button class="btn button-width"></button>
+      </div>
+
+      <!-- Separate button that restarts the quiz -->
+      <div class="buttons container">
+        <button class="btn--restart" id="btn-refresh">Start again</button>
+      </div>
     </main>
 
     <script type="module" src="assets/javascript/script.js"></script>
-</body>
+  </body>
 </html>

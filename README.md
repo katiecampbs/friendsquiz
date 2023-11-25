@@ -37,6 +37,7 @@ The features required to meet the user needs include:
 - **Heading section**  that briefly describes what the page is for
 - **Question section** that separates a question from the rest of the page using a box
 - **Answer section** with four multiple choice answers separated clearly as individual buttons
+- **Score section** that appears at the end of the quiz
 - **Restart button** that allows the user to refresh the page and restart the quiz
 
 ## Skeleton

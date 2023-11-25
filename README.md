@@ -57,6 +57,8 @@ The hover function over the buttons (on devices that support this option) makes 
 
 ![Hover function](assets/images/hover-function.png)
 
+The question box also has a slight drop shadow effect compared with the answer boxes to allow for the user to differentiate between the two.
+
 ## Features
 
 ### Existing Features

@@ -1,12 +1,12 @@
 # Friends Quiz
 
-Friends Quiz is a responsive quiz for lovers of the tv show, "Friends". It is designed for die hard fans to test their knowledge with a set of interactive multiple choice questions, using Javascript. At the end of the quiz, the user is provided with a score out of ten, and has the option to retake the quiz. The site is intended to be used for trivia, for the users enjoyment.
+Friends Quiz is a responsive quiz for lovers of the tv show, "Friends". It is designed for die hard fans to test their knowledge with a set of interactive multiple choice questions, using Javascript. At the end of the quiz, the user is provided with a score out of 15, and has the option to retake the quiz. The site is intended to be used for trivia, for the users enjoyment.
 
 ![Responsive Mockup](assets/images/friends-quiz-screenshot.png)
 
 # UX
 
-The site's intended users are customers, who are fans of the tv show ‘Friends’. The site is designed to be fun and entertaining, while providing some factual content.
+The site's intended users are tv and film fans, who love the tv show ‘Friends’. The site is designed to be fun and entertaining, while providing some factual content.
 
 ## User stories
 
